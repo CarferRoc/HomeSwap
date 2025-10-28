@@ -1,0 +1,17 @@
+# Folders and files created by Android Studio and Gradle
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.cxx/
+
+# Google Services file
+google-services.json
+
+# Keystore files
+*.jks
+*.keystore

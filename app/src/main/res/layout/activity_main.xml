@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/homeswap"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to HomeSwap! 🚀"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Subtítulo -->
+
+    <!-- Botón Apple android:drawableStart="@drawable/ic_apple" -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Don't miss the opportunity to find your new home."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <Button
+        android:id="@+id/btnApple"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Sign Up with Apple"
+        android:textColor="@android:color/black"
+        android:background="@drawable/rounded_button_white"
+        android:drawablePadding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/subtitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="48dp" />
+
+    <!-- Botón Facebook android:drawableStart="@drawable/ic_facebook"-->
+    <Button
+        android:id="@+id/btnFacebook"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Sign Up with Facebook"
+        android:textColor="@android:color/black"
+        android:background="@drawable/rounded_button_white"
+        android:drawablePadding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/btnApple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="48dp" />
+
+    <!-- Botón Google         android:drawableStart="@drawable/ic_google"-->
+    <Button
+        android:id="@+id/btnGoogle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Sign Up with Google"
+        android:textColor="@android:color/black"
+        android:background="@drawable/rounded_button_white"
+        android:drawablePadding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/btnFacebook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="48dp" />
+
+    <!-- Botón Email  android:drawableStart="@drawable/ic_email"-->
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Sign Up with Email"
+        android:textColor="@android:color/black"
+        android:background="@drawable/rounded_button_white"
+        android:drawablePadding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/btnGoogle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="48dp" />
+
+    <!-- Línea divisoria -->
+    <View
+        android:id="@+id/lineLeft"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toStartOf="@+id/orText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEmail"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <TextView
+        android:id="@+id/orText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/btnEmail"
+        app:layout_constraintStart_toEndOf="@id/lineLeft"
+        app:layout_constraintEnd_toStartOf="@+id/lineRight"
+        android:layout_marginTop="16dp" />
+
+    <View
+        android:id="@+id/lineRight"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@id/orText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEmail"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <!-- Botón Login -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Login to my Account"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button_black"
+        app:layout_constraintTop_toBottomOf="@id/orText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="48dp" />
+
+    <!-- Texto inferior -->
+    <TextView
+        android:id="@+id/termsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="By continuing, you agree to HomeSwap® Terms of Service and Privacy Policy"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
