@@ -29,5 +29,20 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CrearCuentaActivity::class.java)
             startActivity(intent)
         }
+
+        btnlogin.setOnClickListener {
+
+        }
+
+        btnapple.setOnClickListener{
+
+        }
+
+        btngoogle.setOnClickListener {
+
+        }
+        btnfacebook.setOnClickListener {
+
+        }
     }
 }
