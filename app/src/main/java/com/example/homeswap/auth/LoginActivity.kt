@@ -1,6 +1,5 @@
-package com.example.homeswap
+package com.example.homeswap.auth
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.homeswap.R
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
                         // Aquí podrías navegar a la pantalla principal de la app
                     } else {
                         // If sign in fails, display a message to the user.
-                        Toast.makeText(baseContext, "Error en el inicio de sesión: ",Toast.LENGTH_LONG).show()
+                        Toast.makeText(baseContext, "Error en el inicio de sesión: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                     }
                 }
         }

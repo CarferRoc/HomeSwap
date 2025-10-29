@@ -1,4 +1,4 @@
-package com.example.homeswap
+package com.example.homeswap.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.homeswap.MainActivity
+import com.example.homeswap.R
 import com.google.firebase.auth.FirebaseAuth
 
 class CrearCuentaActivity : AppCompatActivity() {
@@ -36,8 +38,7 @@ class CrearCuentaActivity : AppCompatActivity() {
         val etConfPass = findViewById<EditText>(R.id.etConfPass)
 
         btnBack.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
         btnNext.setOnClickListener {
